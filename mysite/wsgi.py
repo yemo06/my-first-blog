@@ -12,5 +12,7 @@ import os
 from django.core.wsgi import get_wsgi_application
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mysite.settings')
+SECRET_KEY = os.getenv('DJANGO_GIRLS_SECRET_TOKEN')
+
 
 application = get_wsgi_application()
